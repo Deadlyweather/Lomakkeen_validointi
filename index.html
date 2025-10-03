@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekisteröitymislomake</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group label {
+            width: 120px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            flex: 1;
+            padding: 6px;
+            font-size: 14px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            font-weight: normal;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100px;
+            padding: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rekisteröitymislomake</h1>
+    <h2>Siirry kentästä toiseen tab-näppäimellä</h2>
+
+    <div class="container">
+        <div class="form-group">
+            <label for="KäyttäjäID">KäyttäjäID:</label>
+            <input type="text" id="KäyttäjäID">
+        </div>
+
+        <div class="form-group">
+            <label for="Salasana">Salasana:</label>
+            <input type="text" id="Salasana">
+        </div>
+
+        <div class="form-group">
+            <label for="Nimi">Nimi:</label>
+            <input type="text" id="Nimi">
+        </div>
+
+        <div class="form-group">
+            <label for="Osoite">Osoite:</label>
+            <input type="text" id="Osoite">
+        </div>
+
+        <div class="form-group">
+            <label for="Valinta">Maa:</label>
+            <select id="Valinta">
+                <option value="NULL">(Valitse maa)</option>
+                <option value="Suomi">Suomi</option>
+                <option value="Ruotsi">Ruotsi</option>
+                <option value="Norja">Norja</option>
+                <option value="Tanska">Tanska</option>
+                <option value="Islanti">Islanti</option>
+                <option value="Viro">Viro</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Liettua">Liettua</option>
+                <option value="Saksa">Saksa</option>
+                <option value="Ranska">Ranska</option>
+                <option value="Espanja">Espanja</option>
+                <option value="Italia">Italia</option>
+                <option value="Alankomaat">Alankomaat</option>
+                <option value="Belgia">Belgia</option>
+                <option value="Sveitsi">Sveitsi</option>
+                <option value="Itävalta">Itävalta</option>
+                <option value="Puola">Puola</option>
+                <option value="Tšekki">Tšekki</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Unkari">Unkari</option>
+                <option value="Kreikka">Kreikka</option>
+                <option value="Portugali">Portugali</option>
+                <option value="Irlanti">Irlanti</option>
+                <option value="Iso-Britannia">Iso-Britannia</option>
+                <option value="Yhdysvallat">Yhdysvallat</option>
+                <option value="Kanada">Kanada</option>
+                <option value="Meksiko">Meksiko</option>
+                <option value="Australia">Australia</option>
+                <option value="Uusi-Seelanti">Uusi-Seelanti</option>
+                <option value="Japani">Japani</option>
+                <option value="Kiina">Kiina</option>
+                <option value="Etelä-Korea">Etelä-Korea</option>
+                <option value="Intia">Intia</option>
+                <option value="Brasilia">Brasilia</option>
+                <option value="Etelä-Afrikka">Etelä-Afrikka</option>
+                <option value="Egypti">Egypti</option>
+                <option value="Venäjä">Venäjä</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Postinumero">Postinumero:</label>
+            <input type="text" id="Postinumero">
+        </div>
+
+        <div class="form-group">
+            <label for="Sähköposti">Sähköposti:</label>
+            <input type="text" id="Sähköposti">
+        </div>
+
+        <div class="form-group">
+            <label>Sukupuoli:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="sukupuoli" value="Mies"> Mies</label>
+                <label><input type="radio" name="sukupuoli" value="Nainen"> Nainen</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Kielet:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="Kielet" value="Suomi"> Suomi</label>
+                <label><input type="checkbox" name="Kielet" value="Muu"> Muu</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Lisätietoja">Lisätietoja:</label>
+            <textarea id="Lisätietoja" rows="4"></textarea>
+        </div>
+
+        <button id="Lähetä">Lähetä</button>
+    </div>
+
+    <script src="Editor.js"></script>
+</body>
