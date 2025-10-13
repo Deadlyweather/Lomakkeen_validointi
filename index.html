@@ -4,61 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekisteröitymislomake</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        .container {
-            width: 400px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .form-group label {
-            width: 120px;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        select,
-        textarea {
-            flex: 1;
-            padding: 6px;
-            font-size: 14px;
-        }
-
-        .radio-group,
-        .checkbox-group {
-            display: flex;
-            gap: 15px;
-        }
-
-        .radio-group label,
-        .checkbox-group label {
-            font-weight: normal;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        button {
-            width: 100px;
-            padding: 8px;
-            font-size: 14px;
-            cursor: pointer;
-            margin-left: 120px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Rekisteröitymislomake</h1>
@@ -67,22 +13,22 @@
     <div class="container">
         <div class="form-group">
             <label for="KäyttäjäID">KäyttäjäID:</label>
-            <input type="text" id="KäyttäjäID">
+            <input type="text" id="KäyttäjäID" style="width: 80px;">
         </div>
 
         <div class="form-group">
             <label for="Salasana">Salasana:</label>
-            <input type="text" id="Salasana">
+            <input type="text" id="Salasana" style="width: 80px;">
         </div>
 
         <div class="form-group">
             <label for="Nimi">Nimi:</label>
-            <input type="text" id="Nimi">
+            <input type="text" id="Nimi" style="width: 240px">
         </div>
 
         <div class="form-group">
             <label for="Osoite">Osoite:</label>
-            <input type="text" id="Osoite">
+            <input type="text" id="Osoite" style="width: 240px">
         </div>
 
         <div class="form-group">
@@ -131,7 +77,7 @@
 
         <div class="form-group">
             <label for="Postinumero">Postinumero:</label>
-            <input type="text" id="Postinumero">
+            <input type="text" id="Postinumero"  style="width: 110px">
         </div>
 
         <div class="form-group">
@@ -157,10 +103,12 @@
 
         <div class="form-group">
             <label for="Lisätietoja">Lisätietoja:</label>
-            <textarea id="Lisätietoja" rows="4"></textarea>
+            <textarea id="Lisätietoja"></textarea>
         </div>
-
-        <button id="Lähetä">Lähetä</button>
+        <div class="form-group">
+            <label></label>
+            <input type="submit" value="Lähetä">
+        </div>
     </div>
 
     <script src="Editor.js"></script>
