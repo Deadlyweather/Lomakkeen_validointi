@@ -14,21 +14,25 @@
         <div class="form-group">
             <label for="KäyttäjäID">KäyttäjäID:</label>
             <input type="text" id="KäyttäjäID" style="width: 80px;">
+            <span id="1Virheilmoitus"></span>
         </div>
 
         <div class="form-group">
             <label for="Salasana">Salasana:</label>
             <input type="text" id="Salasana" style="width: 80px;">
+            <span id="2Virheilmoitus"></span>
         </div>
 
         <div class="form-group">
             <label for="Nimi">Nimi:</label>
             <input type="text" id="Nimi" style="width: 240px">
+            <span id="3Virheilmoitus"></span>
         </div>
 
         <div class="form-group">
             <label for="Osoite">Osoite:</label>
             <input type="text" id="Osoite" style="width: 240px">
+            <span id="4Virheilmoitus"></span>
         </div>
 
         <div class="form-group">
@@ -76,16 +80,19 @@
                 </select>
                 <input type="button" class="dropdown-button" value="⏷">
             </div>
+            <span id="5Virheilmoitus"></span>
         </div>
 
         <div class="form-group">
             <label for="Postinumero">Postinumero:</label>
             <input type="text" id="Postinumero" style="width: 110px">
+            <span id="6Virheilmoitus"></span>
         </div>
 
         <div class="form-group">
             <label for="Sähköposti">Sähköposti:</label>
             <input type="text" id="Sähköposti">
+            <span id="7Virheilmoitus"></span>
         </div>
 
         <div class="form-group">
@@ -93,13 +100,14 @@
             <div class="radio-group">
                 <label><input type="radio" name="sukupuoli" value="Mies"> Mies</label>
                 <label><input type="radio" name="sukupuoli" value="Nainen"> Nainen</label>
+                <span id="8Virheilmoitus"></span>
             </div>
         </div>
 
         <div class="form-group">
             <label>Kielet:</label>
             <div class="checkbox-group">
-                <label><input type="checkbox" name="Kielet" value="Suomi"> Suomi</label>
+                <label><input type="checkbox" name="Kielet" value="Suomi" checked> Suomi</label>
                 <label><input type="checkbox" name="Kielet" value="Muu"> Muu</label>
             </div>
         </div>
@@ -108,11 +116,14 @@
             <label for="Lisätietoja">Lisätietoja:</label>
             <textarea id="Lisätietoja"></textarea>
         </div>
+
         <div class="form-group">
             <label></label>
-            <input type="submit" value="Lähetä">
+            <input type="submit" value="Lähetä" class="submit-button">
+            <span id="tarkistus"></span>
         </div>
     </div>
 
     <script src="Editor.js"></script>
 </body>
+</html>

@@ -9,11 +9,19 @@ body {
     gap: 15px;
 }
 
+input[type="text"]:focus {
+    border: 1px solid gray;
+    outline: 1px solid orange;
+    box-shadow: 0px 0px 8px -2px orange;
+}
+
 .form-group {
     display: flex;
     align-items: flex-start;
     gap: 10px;
 }
+
+
 
 .form-group label {
     width: 100px;
@@ -42,13 +50,14 @@ input[type="checkbox"] {
     position: relative;
 }
 input[type="radio"]:checked {
-    background-color: slateblue;
+    background-color: rgb(93, 111, 160);
 }
 
 input[type="checkbox"]:checked::after {
     content: "✔";
-    color: slateblue;
-    font-size: 14px bold;
+    color: rgb(93, 111, 160); /*väri kopioitu ohjeen kuvasta*/
+    font-size: 14px;
+    font-weight: bold;
     position: absolute;
     top: -35%;
     pointer-events: none;
@@ -80,13 +89,17 @@ input[type="radio"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    size: 16px;
-    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
+    padding: 0;
     border: 1px solid darkgrey;
     background-color: lightgrey;
-    box-shadow: inset 0px 5px 5px rgba(255,255,255,0.8);
-    
+    box-shadow: inset 0px 0px 2px black,
+    inset 0px 12px 8px rgba(255,255,255,0.8);
+    margin-left: -1px;
 }
 
 .split-dropdown {
@@ -116,4 +129,17 @@ input[type="submit"] {
     cursor: pointer;
     margin-left: 80px;
     border-radius: 5%;
+}
+
+span[id$="Virheilmoitus"] {
+    color: red;
+    font-size: 12px;
+    margin-left: 10px;
+    display: inline-block;
+}
+span#tarkistus {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: greenyellow;
 }
